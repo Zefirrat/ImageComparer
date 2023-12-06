@@ -15,10 +15,10 @@ jobs:
 
 # Zefirrat.ImageComparer.Abstractions
       - name: Build Zefirrat.ImageComparer.Abstractions
-        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer.Abstractions
       - name: Pack Zefirrat.ImageComparer.Abstractions
-        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer.Abstractions
       - name: Upload artifact Zefirrat.ImageComparer.Abstractions
         uses: actions/upload-artifact@v1
@@ -30,10 +30,10 @@ jobs:
 
 # Zefirrat.ImageComparer.AspNet.Di
       - name: Build Zefirrat.ImageComparer.AspNet.Di
-        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer.AspNet.Di
       - name: Pack Zefirrat.ImageComparer.AspNet.Di
-        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer.AspNet.Di
       - name: Upload artifact Zefirrat.ImageComparer.AspNet.Di
         uses: actions/upload-artifact@v1
@@ -45,10 +45,10 @@ jobs:
 
 # Zefirrat.ImageComparer
       - name: Build Zefirrat.ImageComparer
-        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer
       - name: Pack Zefirrat.ImageComparer
-        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer"
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…"
         working-directory: ./Zefirrat.ImageComparer
       - name: Upload artifact Zefirrat.ImageComparer
         uses: actions/upload-artifact@v1
