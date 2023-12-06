@@ -1,0 +1,62 @@
+name: Release to NuGet
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1
+          
+
+# Zefirrat.ImageComparer.Abstractions
+      - name: Build Zefirrat.ImageComparer.Abstractions
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer.Abstractions
+      - name: Pack Zefirrat.ImageComparer.Abstractions
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer.Abstractions
+      - name: Upload artifact Zefirrat.ImageComparer.Abstractions
+        uses: actions/upload-artifact@v1
+        with:
+          name: Code.Library
+          path: ./Zefirrat.ImageComparer.Abstractions/bin/Release/Zefirrat.ImageComparer.Abstractions.${{ github.event.release.tag_name }}.nupkg
+      - name: Publish Nuget Zefirrat.ImageComparer.Abstractions
+        run: dotnet nuget push Zefirrat.ImageComparer.Abstractions/bin/Release/Zefirrat.ImageComparer.Abstractions.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+
+# Zefirrat.ImageComparer.AspNet.Di
+      - name: Build Zefirrat.ImageComparer.AspNet.Di
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer.AspNet.Di
+      - name: Pack Zefirrat.ImageComparer.AspNet.Di
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer.AspNet.Di
+      - name: Upload artifact Zefirrat.ImageComparer.AspNet.Di
+        uses: actions/upload-artifact@v1
+        with:
+          name: Code.Library
+          path: ./Zefirrat.ImageComparer.AspNet.Di/bin/Release/Zefirrat.ImageComparer.AspNet.Di.${{ github.event.release.tag_name }}.nupkg
+      - name: Publish Nuget Zefirrat.ImageComparer.AspNet.Di
+        run: dotnet nuget push Zefirrat.ImageComparer.AspNet.Di/bin/Release/Zefirrat.ImageComparer.AspNet.Di.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+
+# Zefirrat.ImageComparer
+      - name: Build Zefirrat.ImageComparer
+        run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer
+      - name: Pack Zefirrat.ImageComparer
+        run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}"
+        working-directory: ./Zefirrat.ImageComparer
+      - name: Upload artifact Zefirrat.ImageComparer
+        uses: actions/upload-artifact@v1
+        with:
+          name: Code.Library
+          path: ./Zefirrat.ImageComparer/bin/Release/Zefirrat.ImageComparer.${{ github.event.release.tag_name }}.nupkg
+      - name: Publish Nuget Zefirrat.ImageComparer
+        run: dotnet nuget push Zefirrat.ImageComparer/bin/Release/Zefirrat.ImageComparer.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+
+
+
