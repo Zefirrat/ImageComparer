@@ -10,7 +10,7 @@ using SixLabors.ImageSharp.ColorSpaces;
 using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
-using Zefirrat.ImageComparer.Abstrtactions;
+using Zefirrat.ImageComparer.Abstractions;
 
 namespace Zefirrat.ImageComparer
 {

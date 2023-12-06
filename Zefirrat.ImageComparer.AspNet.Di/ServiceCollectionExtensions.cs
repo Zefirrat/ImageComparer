@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Zefirrat.ImageComparer.Abstrtactions;
+using Zefirrat.ImageComparer.Abstractions;
 
 namespace Zefirrat.ImageComparer.AspNet.Di
 {

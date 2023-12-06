@@ -6,7 +6,7 @@ using System.Linq;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
 using Zefirrat.ImageComparer;
-using Zefirrat.ImageComparer.Abstrtactions;
+using Zefirrat.ImageComparer.Abstractions;
 
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;

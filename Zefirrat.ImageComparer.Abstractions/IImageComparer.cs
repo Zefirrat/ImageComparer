@@ -1,7 +1,7 @@
 using System.IO;
 using SixLabors.ImageSharp;
 
-namespace Zefirrat.ImageComparer.Abstrtactions
+namespace Zefirrat.ImageComparer.Abstractions
 {
 
     public interface IImageComparer :

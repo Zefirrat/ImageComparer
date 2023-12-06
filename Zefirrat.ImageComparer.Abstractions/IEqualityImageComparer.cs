@@ -1,4 +1,4 @@
-namespace Zefirrat.ImageComparer.Abstrtactions
+namespace Zefirrat.ImageComparer.Abstractions
 {
     public interface IEqualityImageComparer<T>
     {
