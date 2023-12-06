@@ -8,8 +8,9 @@
         <LangVersion>preview</LangVersion>
     </PropertyGroup>
 
+
     <ItemGroup>
-      <ProjectReference Include="..\Zefirrat.ImageComparer\Zefirrat.ImageComparer.csproj" />
+      <PackageReference Include="Zefirrat.ImageComparer" Version="1.0.0.1" />
     </ItemGroup>
 
 </Project>
