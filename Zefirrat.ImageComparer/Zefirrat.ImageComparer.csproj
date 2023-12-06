@@ -15,7 +15,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstractions.csproj" />
-      <ProjectReference Include="..\Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstrtactions.csproj" />
+      <ProjectReference Include="..\Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

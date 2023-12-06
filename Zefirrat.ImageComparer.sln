@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefirrat.ImageComparer.AspNet.Di", "Zefirrat.ImageComparer.AspNet.Di\Zefirrat.ImageComparer.AspNet.Di.csproj", "{0F3A8C6B-9EBC-4822-A258-1AEC157008D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefirrat.ImageComparer.Abstrtactions", "Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstrtactions.csproj", "{738585CF-E905-4700-B287-5A1EF3DC2E9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zefirrat.ImageComparer.Abstractions", "Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstractions.csproj", "{738585CF-E905-4700-B287-5A1EF3DC2E9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
