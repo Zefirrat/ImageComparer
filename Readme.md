@@ -8,7 +8,9 @@ For example, for images with noise, the similarity of compressed images and the 
 ![image](Test_Images/test_image_source.png)
 
 ## Comparing with compressed:
-![image](Test_Images/test_image_source_compressed.jpg)
+|Original|Compressed|
+|-|-|
+|![image](Test_Images/test_image_source.png)|![image](Test_Images/test_image_source_compressed.jpg)|
 
 ### Result:
 ```sh
@@ -35,7 +37,9 @@ Accuracy: VeryHigh
 ```
 
 ## Added transparent drawing at right bottom corner:
-![image](Test_Images/test_image_changed.png)
+|Original|With light drawing|
+|-|-|
+|![image](Test_Images/test_image_source.png)|![image](Test_Images/test_image_changed.png)|
 
 ### Result:
 ```sh
@@ -62,7 +66,9 @@ Accuracy: VeryHigh
 ```
 
 ## Added few red curves:
-![image](Test_Images/test_image_changed_2.png)
+|Original|With red curves|
+|-|-|
+|![image](Test_Images/test_image_source.png)|![image](Test_Images/test_image_changed_2.png)|
 
 ### Result:
 ```sh
@@ -89,7 +95,9 @@ Accuracy: VeryHigh
 ```
 
 ## Added more red curves:
-![image](Test_Images/test_image_changed_3.png)
+|Original|With red curves|
+|-|-|
+|![image](Test_Images/test_image_source.png)|![image](Test_Images/test_image_changed_3.png)|
 
 ### Result:
 ```sh
@@ -115,8 +123,10 @@ Accuracy: VeryHigh
 -------------------------
 ```
 
-## Added mush more red curves:
-![image](Test_Images/test_image_changed_4.png)
+## Added much more red curves:
+|Original|Painted|
+|-|-|
+|![image](Test_Images/test_image_source.png)|![image](Test_Images/test_image_changed_4.png)|
 
 ### Result:
 ```sh
@@ -160,8 +170,12 @@ PM > Install-Package Zefirrat.ImageComparer
     var similar = imageComparer.AreSimilar(image1, image2);
     var equal = imageComparer.AreEqual(image1, image2);
 ```
+
+## Overloads
+![image](https://github.com/Zefirrat/ImageComparer/assets/37443756/9a2fe232-70a3-44c9-9712-cf29e183b7eb)
+
 ## Accuracy options
-Выше значение - выше допускаемый разброс.  
+A higher value means a higher acceptable spread.
 
 ```csharp
 public cllass ImageComparer
