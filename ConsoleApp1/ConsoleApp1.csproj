@@ -10,7 +10,7 @@
 
 
     <ItemGroup>
-      <PackageReference Include="Zefirrat.ImageComparer" Version="1.0.0.1" />
+      <PackageReference Include="Zefirrat.ImageComparer" Version="1.0.0.3" />
     </ItemGroup>
 
 </Project>

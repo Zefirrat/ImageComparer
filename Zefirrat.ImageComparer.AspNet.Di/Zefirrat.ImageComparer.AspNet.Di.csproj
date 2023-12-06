@@ -1,4 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+        <AssemblyName>Zefirrat.ImageComparer.AspNet.Di</AssemblyName>
+        <AssemblyTitle>Zefirrat.ImageComparer.AspNet.Di</AssemblyTitle>
+        <PackageIconUrl>https://avatars.githubusercontent.com/u/37443756?v=4</PackageIconUrl>
+        <RepositoryUrl>https://github.com/Zefirrat/ImageComparer</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Zefirrat/ImageComparer</PackageProjectUrl>
+        <PackageTags>Image Similar Equals Compare Percision Accuracy Jpg Png</PackageTags>
+        <Description>.Net C# Package. Recognition of similar or same images, with varying degrees of accuracy. For example, for images with noise, the similarity of compressed images and the original ones, to search for the original image by its compressed copy, to search for images with small changes or distortions.</Description>
+        <Configurations>Debug;Release</Configurations>
+    </PropertyGroup>
 
     <PropertyGroup>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -13,8 +24,8 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0"/>
-        <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.0.0"/>
-        <PackageReference Include="Zefirrat.ImageComparer" Version="1.0.0"/>
+        <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.0.0.3" />
+        <PackageReference Include="Zefirrat.ImageComparer" Version="1.0.0.3" />
     </ItemGroup>
 
 </Project>
