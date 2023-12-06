@@ -7,8 +7,8 @@
         <TargetFrameworks>netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
         <LangVersion>8</LangVersion>
         <ImplicitUsings>disable</ImplicitUsings>
-        <Authors>Zefirrat</Authors>
-        <WebPage>https://github.com/Zefirrat/ImageComparer/tree/main</WebPage>
+        <Author>Zefirrat</Author>
+        <Links>https://github.com/Zefirrat/ImageComparer/tree/main</Links>
     </PropertyGroup>
 
     <ItemGroup>
