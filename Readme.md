@@ -160,9 +160,9 @@ Accuracy: VeryHigh
 PM > Install-Package Zefirrat.ImageComparer
 ```
 ## Nuget
-[Nuget package Zefirrat.ImageComparer](https://www.nuget.org/packages/Zefirrat.ImageComparer/)
-[Nuget package Zefirrat.ImageComparer.Abstractions](https://www.nuget.org/packages/Zefirrat.ImageComparer.Abstractions/)
-[Nuget package Zefirrat.ImageComparer.AspNet.Di](https://www.nuget.org/packages/Zefirrat.ImageComparer.AspNet.Di/)
+[Nuget package Zefirrat.ImageComparer](https://www.nuget.org/packages/Zefirrat.ImageComparer/)  
+[Nuget package Zefirrat.ImageComparer.Abstractions](https://www.nuget.org/packages/Zefirrat.ImageComparer.Abstractions/)  
+[Nuget package Zefirrat.ImageComparer.AspNet.Di](https://www.nuget.org/packages/Zefirrat.ImageComparer.AspNet.Di/)  
 
 
 # Usage
