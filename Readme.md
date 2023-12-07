@@ -208,9 +208,11 @@ public cllass ImageComparer
 ```
 
 ## Dependency Injection
-In `Configure`:
+Install [Nuget package Zefirrat.ImageComparer.AspNet.Di](https://www.nuget.org/packages/Zefirrat.ImageComparer.AspNet.Di/)  
+
+In `Configure` add:
 ```csharp
-    serviceCollection.AddImageComparer
+    serviceCollection.AddImageComparer();
 ```
 
 And then request as interface:
