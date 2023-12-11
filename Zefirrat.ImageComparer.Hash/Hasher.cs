@@ -10,12 +10,15 @@ using Zefirrat.ImageComparer.Abstractions;
 
 namespace Zefirrat.ImageComparer.Hash
 {
-    public class Hasher: IImageHasher
+    public class Hasher : IImageHasher
     {
         private readonly ImageComparerOptions _options;
-        public Hasher() : this(new ImageComparerOptions()){}
 
-        private Hasher(ImageComparerOptions options)
+        public Hasher() : this(new ImageComparerOptions())
+        {
+        }
+
+        public Hasher(ImageComparerOptions options)
         {
             _options = options;
         }
@@ -93,7 +96,7 @@ namespace Zefirrat.ImageComparer.Hash
         {
             return ToVector(Image.Load(imagePath));
         }
-        
+
         private static double CalculateStandardDeviation(IEnumerable<double> converted2, double s, int n)
         {
             var tmp = 0.0;

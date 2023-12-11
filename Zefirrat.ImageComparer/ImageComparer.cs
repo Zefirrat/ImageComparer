@@ -11,6 +11,7 @@ using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using Zefirrat.ImageComparer.Abstractions;
+using Zefirrat.ImageComparer.Hash;
 
 namespace Zefirrat.ImageComparer
 {
@@ -19,6 +20,7 @@ namespace Zefirrat.ImageComparer
     {
         private readonly ImageComparerOptions _options;
         private readonly SemaphoreSlim _semaphoreSlim;
+        private readonly IImageHasher _hasher;
         
         public ImageComparer() : this(new ImageComparerOptions())
         {
@@ -29,6 +31,7 @@ namespace Zefirrat.ImageComparer
             Debug.Assert(options != null, nameof(options) + " != null");
             _options = options;
             _semaphoreSlim = new SemaphoreSlim((int)_options.MaxConcurrency);
+            _hasher = new Hasher(_options);
         }
 
         private bool CompareEquality(Image image1, Image image2)
@@ -49,7 +52,7 @@ namespace Zefirrat.ImageComparer
 
         private bool CompareSimilarity(Image image1, Image image2)
         {
-            var vectors1 = ImageToVectors(image1);
+            var vectors1 = _hasher;
             var vectors2 = ImageToVectors(image2);
 
             var standardDeviation1 =
@@ -78,35 +81,6 @@ namespace Zefirrat.ImageComparer
             var sko = Math.Sqrt(tmp / n);
 
             return sko;
-        }
-
-        private double[] ImageToVectors(Image image)
-        {
-            image.Mutate(i => i.Grayscale());
-            image.Mutate(i => i.Resize(new Size(16, 16)));
-            using var cloned = image.CloneAs<RgbaVector>();
-
-            var result = new List<double>();
-
-            for (var i = 0;
-                 i <
-                 cloned.Size()
-                     .Height;
-                 i++)
-            {
-                for (var j = 0;
-                     j <
-                     cloned.Size()
-                         .Width;
-                     j++)
-                {
-                    result.Add(cloned[i, j]
-                        .ToVector4()
-                        .Length());
-                }
-            }
-
-            return result.ToArray();
         }
 
         private void WaitForSemaphore()
