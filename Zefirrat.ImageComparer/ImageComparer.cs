@@ -19,7 +19,6 @@ namespace Zefirrat.ImageComparer
     {
         private readonly ImageComparerOptions _options;
         private readonly SemaphoreSlim _semaphoreSlim;
-        private const double Ratio = 0.00005;
         
         public ImageComparer() : this(new ImageComparerOptions())
         {
@@ -39,7 +38,7 @@ namespace Zefirrat.ImageComparer
 
             for (var i = 0; i < vectors1.Length; i++)
             {
-                if (Math.Abs(vectors1[i] - vectors2[i]) > Ratio * _options.Accuracy)
+                if (Math.Abs(vectors1[i] - vectors2[i]) > _options.CustomRatio * _options.Accuracy)
                 {
                     return false;
                 }
@@ -62,7 +61,7 @@ namespace Zefirrat.ImageComparer
                 (vectors1.Sum() + vectors2.Sum()) / (vectors1.Length + vectors2.Length),
                 vectors1.Length + vectors2.Length);
 
-            var accuracy = Ratio * _options.Accuracy;
+            var accuracy = _options.CustomRatio * _options.Accuracy;
 
             return Math.Abs(standardDeviation3 - standardDeviation1) < accuracy &&
                 Math.Abs(standardDeviation3 - standardDeviation2) < accuracy;
