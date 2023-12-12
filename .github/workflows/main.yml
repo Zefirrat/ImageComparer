@@ -3,33 +3,10 @@ on:
   release:
     types: [published]
 jobs:
-  paths-filter:
-    runs-on: ubuntu-latest
-    outputs:
-      zefirrat_imagecomparer_abstractions: ${{ steps.filter.outputs.zefirrat_imagecomparer_abstractions }}
-      zefirrat_imagecomparer_aspnet_di: ${{ steps.filter.outputs.zefirrat_imagecomparer_aspnet_di }}
-      zefirrat_imagecomparer_hash: ${{ steps.filter.outputs.zefirrat_imagecomparer_hash }}
-      zefirrat_imagecomparer: ${{ steps.filter.outputs.zefirrat_imagecomparer }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          filters: |
-            zefirrat_imagecomparer_abstractions:
-              - 'Zefirrat.ImageComparer.Abstractions/**'
-            zefirrat_imagecomparer_aspnet_di:
-              - 'Zefirrat.ImageComparer.AspNet.Di/**'
-            zefirrat_imagecomparer_hash:
-              - 'Zefirrat.ImageComparer.Hash/**'
-            zefirrat_imagecomparer:
-              - 'Zefirrat.ImageComparer/**'
-  
   
 # Zefirrat.ImageComparer.Abstractions
   Zefirrat_ImageComparer_Abstractions:
     runs-on: ubuntu-latest
-    needs: paths-filter
     if: needs.paths-filter.outputs.zefirrat_imagecomparer_abstractions == 'true'
     steps:
       - uses: actions/checkout@v2
@@ -54,7 +31,6 @@ jobs:
 # Zefirrat.ImageComparer.AspNet.Di
   Zefirrat_ImageComparer_AspNet_Di:
     runs-on: ubuntu-latest
-    needs: paths-filter
     if: needs.paths-filter.outputs.zefirrat_imagecomparer_aspnet_di == 'true'
     steps:
       - uses: actions/checkout@v2
@@ -79,7 +55,6 @@ jobs:
 # Zefirrat.ImageComparer.Hash
   Zefirrat_ImageComparer_Hash:
     runs-on: ubuntu-latest
-    needs: paths-filter
     if: needs.paths-filter.outputs.zefirrat_imagecomparer_hash == 'true'
     steps:
       - uses: actions/checkout@v2
@@ -104,7 +79,6 @@ jobs:
 # Zefirrat.ImageComparer
   Zefirrat_ImageComparer:
     runs-on: ubuntu-latest
-    needs: paths-filter
     if: needs.paths-filter.outputs.zefirrat_imagecomparer == 'true'
     steps:
       - uses: actions/checkout@v2
