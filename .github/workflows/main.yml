@@ -7,7 +7,6 @@ jobs:
 # Zefirrat.ImageComparer.Abstractions
   Zefirrat_ImageComparer_Abstractions:
     runs-on: ubuntu-latest
-    if: needs.paths-filter.outputs.zefirrat_imagecomparer_abstractions == 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -31,7 +30,6 @@ jobs:
 # Zefirrat.ImageComparer.AspNet.Di
   Zefirrat_ImageComparer_AspNet_Di:
     runs-on: ubuntu-latest
-    if: needs.paths-filter.outputs.zefirrat_imagecomparer_aspnet_di == 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -55,7 +53,6 @@ jobs:
 # Zefirrat.ImageComparer.Hash
   Zefirrat_ImageComparer_Hash:
     runs-on: ubuntu-latest
-    if: needs.paths-filter.outputs.zefirrat_imagecomparer_hash == 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -79,7 +76,6 @@ jobs:
 # Zefirrat.ImageComparer
   Zefirrat_ImageComparer:
     runs-on: ubuntu-latest
-    if: needs.paths-filter.outputs.zefirrat_imagecomparer == 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
