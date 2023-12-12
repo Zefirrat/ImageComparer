@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
@@ -57,25 +56,26 @@ namespace Zefirrat.ImageComparer.Hash
         {
             image.Mutate(i => i.Grayscale());
             image.Mutate(i => i.Resize(new Size(16, 16)));
-            using var cloned = image.CloneAs<RgbaVector>();
-
+            
             var result = new List<double>();
-
-            for (var i = 0;
-                 i <
-                 cloned.Size()
-                     .Height;
-                 i++)
+            using (var cloned = image.CloneAs<RgbaVector>())
             {
-                for (var j = 0;
-                     j <
+                for (var i = 0;
+                     i <
                      cloned.Size()
-                         .Width;
-                     j++)
+                         .Height;
+                     i++)
                 {
-                    result.Add(cloned[i, j]
-                        .ToVector4()
-                        .Length());
+                    for (var j = 0;
+                         j <
+                         cloned.Size()
+                             .Width;
+                         j++)
+                    {
+                        result.Add(cloned[i, j]
+                            .ToVector4()
+                            .Length());
+                    }
                 }
             }
 
