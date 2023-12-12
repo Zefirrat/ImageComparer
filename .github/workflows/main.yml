@@ -8,7 +8,7 @@ jobs:
     outputs:
       zefirrat_imagecomparer_abstractions: ${{ steps.filter.outputs.zefirrat_imagecomparer_abstractions }}
       zefirrat_imagecomparer_aspnet_di: ${{ steps.filter.outputs.zefirrat_imagecomparer_aspnet_di }}
-      zefirrat_imagecomparer_haser: ${{ steps.filter.outputs.zefirrat_imagecomparer_hasher }}
+      zefirrat_imagecomparer_hasher: ${{ steps.filter.outputs.zefirrat_imagecomparer_hasher }}
       zefirrat_imagecomparer: ${{ steps.filter.outputs.zefirrat_imagecomparer }}
     steps:
       - uses: actions/checkout@v2
