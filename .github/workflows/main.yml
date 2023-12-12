@@ -21,7 +21,7 @@ jobs:
             zefirrat_imagecomparer_aspnet_di:
               - 'Zefirrat.ImageComparer.AspNet.Di/**'
             zefirrat_imagecomparer_hasher:
-              - 'Zefirrat.ImageComparer.Hasher/**'
+              - 'Zefirrat.ImageComparer.Hash/**'
             zefirrat_imagecomparer:
               - 'Zefirrat.ImageComparer/**'
   
