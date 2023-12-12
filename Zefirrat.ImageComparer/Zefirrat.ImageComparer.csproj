@@ -9,7 +9,7 @@
         <PackageTags>Image Similar Equals Compare Percision Accuracy Jpg Png</PackageTags>
         <Description>.Net C# Package. Recognition of similar or same images, with varying degrees of accuracy. For example, for images with noise, the similarity of compressed images and the original ones, to search for the original image by its compressed copy, to search for images with small changes or distortions.</Description>
         <Configurations>Debug;Release</Configurations>
-        <Version>1.1.0</Version>
+        <Version></Version>
     </PropertyGroup>
     
     <PropertyGroup>

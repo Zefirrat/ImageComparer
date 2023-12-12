@@ -2,13 +2,13 @@
 
     <PropertyGroup>
         <TargetFrameworks>netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
-        <Version>1.1.0</Version>
+        <Version></Version>
         <AssemblyVersion>1.1.0</AssemblyVersion>
         <FileVersion>1.1.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.1.0" />
+      <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.1.0-pre7" />
     </ItemGroup>
 
 </Project>
