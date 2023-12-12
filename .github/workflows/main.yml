@@ -48,8 +48,10 @@ jobs:
         with:
           name: Zefirrat.ImageComparer.Abstractions
           path: ./Zefirrat.ImageComparer.Abstractions/bin/Release/Zefirrat.ImageComparer.Abstractions.${{ github.event.release.tag_name }}.nupkg
-      - name: Publish Nuget Zefirrat.ImageComparer.Abstractions
+      - name: Publish Nuget Zefirrat.ImageComparer.Abstractions to nuget
         run: dotnet nuget push Zefirrat.ImageComparer.Abstractions/bin/Release/Zefirrat.ImageComparer.Abstractions.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+      - name: Publish Nuget Zefirrat.ImageComparer.Abstractions to github
+        run: dotnet nuget push Zefirrat.ImageComparer.Abstractions/bin/Release/Zefirrat.ImageComparer.Abstractions.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key_github }} --source https://nuget.pkg.github.com/Zefirrat/index.json --no-symbols true
 
   Zefirrat_ImageComparer_AspNet_Di:
     runs-on: ubuntu-latest
@@ -76,6 +78,8 @@ jobs:
           path: ./Zefirrat.ImageComparer.AspNet.Di/bin/Release/Zefirrat.ImageComparer.AspNet.Di.${{ github.event.release.tag_name }}.nupkg
       - name: Publish Nuget Zefirrat.ImageComparer.AspNet.Di
         run: dotnet nuget push Zefirrat.ImageComparer.AspNet.Di/bin/Release/Zefirrat.ImageComparer.AspNet.Di.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+      - name: Publish Nuget Zefirrat.ImageComparer.AspNet.Di to github
+        run: dotnet nuget push Zefirrat.ImageComparer.AspNet.Di/bin/Release/Zefirrat.ImageComparer.AspNet.Di.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key_github }} --source https://nuget.pkg.github.com/Zefirrat/index.json --no-symbols true
 
   Zefirrat_ImageComparer_Hasher:
     runs-on: ubuntu-latest
@@ -128,6 +132,8 @@ jobs:
           path: ./Zefirrat.ImageComparer/bin/Release/Zefirrat.ImageComparer.${{ github.event.release.tag_name }}.nupkg
       - name: Publish Nuget Zefirrat.ImageComparer
         run: dotnet nuget push Zefirrat.ImageComparer/bin/Release/Zefirrat.ImageComparer.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true
+      - name: Publish Nuget Zefirrat.ImageComparer to github
+        run: dotnet nuget push Zefirrat.ImageComparer/bin/Release/Zefirrat.ImageComparer.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key_github }} --source https://nuget.pkg.github.com/Zefirrat/index.json --no-symbols true
 
 
 

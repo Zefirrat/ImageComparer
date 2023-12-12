@@ -155,9 +155,15 @@ Accuracy: VeryHigh
 
 # Installation
 
+## Package manager
 ```powershell
 PM > Install-Package Zefirrat.ImageComparer
 ```
+## Nuget
+[Nuget package Zefirrat.ImageComparer](https://www.nuget.org/packages/Zefirrat.ImageComparer/)  
+[Nuget package Zefirrat.ImageComparer.Abstractions](https://www.nuget.org/packages/Zefirrat.ImageComparer.Abstractions/)  
+[Nuget package Zefirrat.ImageComparer.AspNet.Di](https://www.nuget.org/packages/Zefirrat.ImageComparer.AspNet.Di/)  
+
 
 # Usage
 ## Base
@@ -173,6 +179,11 @@ PM > Install-Package Zefirrat.ImageComparer
 
 ## Overloads
 ![image](https://github.com/Zefirrat/ImageComparer/assets/37443756/9a2fe232-70a3-44c9-9712-cf29e183b7eb)
+
+- Image (from [SixLabors.ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp))
+- Stream (format does not matter)
+- byte array (format does not matter)
+- string (path to file)
 
 ## Accuracy options
 A higher value means a higher acceptable spread.
@@ -197,9 +208,11 @@ public cllass ImageComparer
 ```
 
 ## Dependency Injection
-In `Configure`:
+Install [Nuget package Zefirrat.ImageComparer.AspNet.Di](https://www.nuget.org/packages/Zefirrat.ImageComparer.AspNet.Di/)  
+
+In `Configure` add:
 ```csharp
-    serviceCollection.AddImageComparer
+    serviceCollection.AddImageComparer();
 ```
 
 And then request as interface:
