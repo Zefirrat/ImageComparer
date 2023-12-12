@@ -23,12 +23,7 @@
 
     <ItemGroup>
       <PackageReference Include="SixLabors.ImageSharp" Version="2.1.6" />
-      <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.1.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Zefirrat.ImageComparer.Abstractions\Zefirrat.ImageComparer.Abstractions.csproj" />
-      <ProjectReference Include="..\Zefirrat.ImageComparer.Hash\Zefirrat.ImageComparer.Hash.csproj" />
+      <PackageReference Include="Zefirrat.ImageComparer.Abstractions" Version="1.1.0-pre9" />
     </ItemGroup>
 
 
