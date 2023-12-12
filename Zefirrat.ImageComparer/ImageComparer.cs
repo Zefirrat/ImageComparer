@@ -15,13 +15,12 @@ using Zefirrat.ImageComparer.Hash;
 
 namespace Zefirrat.ImageComparer
 {
-
     public class ImageComparer : IImageComparer
     {
         private readonly ImageComparerOptions _options;
         private readonly SemaphoreSlim _semaphoreSlim;
         private readonly IImageHasher _hasher;
-        
+
         public ImageComparer() : this(new ImageComparerOptions())
         {
         }
@@ -36,8 +35,8 @@ namespace Zefirrat.ImageComparer
 
         private bool CompareEquality(Image image1, Image image2)
         {
-            var vectors1 = ImageToVectors(image1);
-            var vectors2 = ImageToVectors(image2);
+            var vectors1 = _hasher.ToVector(image1);
+            var vectors2 = _hasher.ToVector(image2);
 
             for (var i = 0; i < vectors1.Length; i++)
             {
@@ -52,8 +51,8 @@ namespace Zefirrat.ImageComparer
 
         private bool CompareSimilarity(Image image1, Image image2)
         {
-            var vectors1 = _hasher;
-            var vectors2 = ImageToVectors(image2);
+            var vectors1 = _hasher.ToVector(image1);
+            var vectors2 = _hasher.ToVector(image2);
 
             var standardDeviation1 =
                 CalculateStandardDeviation(vectors1, vectors1.Sum() / vectors1.Length, vectors1.Length);
