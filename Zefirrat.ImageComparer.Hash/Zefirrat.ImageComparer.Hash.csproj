@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageIconUrl>https://avatars.githubusercontent.com/u/37443756?v=4</PackageIconUrl>
-        <TargetFrameworks>net7;net5;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net7;net6</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
