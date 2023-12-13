@@ -12,7 +12,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1
+          dotnet-version: 7.*
       - name: Build Zefirrat.ImageComparer.Abstractions
         run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…" ./Zefirrat.ImageComparer.Abstractions
       - name: Pack Zefirrat.ImageComparer.Abstractions
@@ -35,7 +35,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1
+          dotnet-version: 7.*
       - name: Build Zefirrat.ImageComparer.AspNet.Di
         run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…" ./Zefirrat.ImageComparer.AspNet.Di
       - name: Pack Zefirrat.ImageComparer.AspNet.Di
@@ -58,7 +58,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1
+          dotnet-version: 7.*
       - name: Build Zefirrat.ImageComparer.Hash
         run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…" ./Zefirrat.ImageComparer.Hash
       - name: Pack Zefirrat.ImageComparer.Hash
@@ -81,7 +81,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1
+          dotnet-version: 7.*
       - name: Build Zefirrat.ImageComparer
         run: dotnet build -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/Zefirrat/ImageComparer/releases/tag/${{ github.event.release.tag_name }}" /p:Authors="Zefirrat" /p:PackageDescription="See https://github.com/Zefirrat/ImageComparer" /p:Links="https://github.com/Zefirrat/ImageComparer" /p:RepositoryUrl="https://github.com/Zefirrat/ImageComparer" /p:IconUrl="https://avatars.githubusercontent.com/u/37443756?v=4" /p:Description="Recognition of similar or same images with varying degrees of accuracy. For example for images with noise the similarity of compressed images and the original ones to search for the original im…" ./Zefirrat.ImageComparer
       - name: Pack Zefirrat.ImageComparer
