@@ -62,13 +62,13 @@ namespace Zefirrat.ImageComparer.Hash
             {
                 for (var i = 0;
                      i <
-                     cloned.Size()
+                     cloned.Size
                          .Height;
                      i++)
                 {
                     for (var j = 0;
                          j <
-                         cloned.Size()
+                         cloned.Size
                              .Width;
                          j++)
                     {
